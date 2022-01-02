@@ -1,0 +1,31 @@
+//========= Copyright Valve Corporation, All rights reserved. ============//
+//
+// Purpose:
+//
+//=====================================================================================//
+
+#include "../public/mathlib/halton.h"
+
+HaltonSequenceGenerator_t::HaltonSequenceGenerator_t(int b)
+{
+	base = b;
+	fbase = (float)b;
+	seed = 1;
+}
+
+float HaltonSequenceGenerator_t::GetElement(int elem)
+{
+	int tmpseed = seed;
+	float ret = 0.0f;
+	float base_inv = 1.0f / fbase;
+
+	while (tmpseed)
+	{
+		int dig = tmpseed % base;
+		ret += ((float)dig) * base_inv;
+		base_inv /= fbase;
+		tmpseed /= base;
+	}
+
+	return ret;
+}
