@@ -120,6 +120,7 @@ public:
 	virtual void             ProcessMuzzleFlashEvent() = 0;
 	virtual void             SetServerIntendedCycle(float intended) = 0;
 	virtual float            GetServerIntendedCycle(void) = 0;
+	virtual bool			 ShouldFlipViewModel() = 0;
 	virtual bool			 ShouldResetSequenceOnNewModel(void) = 0;
 	virtual bool			 IsViewModel() const = 0;
 	virtual void			 FormatViewModelAttachment(int nAttachment, matrix3x4_t& attachmentToWorld) = 0;
