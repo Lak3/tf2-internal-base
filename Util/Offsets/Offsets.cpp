@@ -31,7 +31,7 @@ bool COffsets::Initialize()
 	m_dwGetTracerType = g_Pattern.Find("client.dll", "55 8B EC 51 53 56 57 8B F9 E8 ? ? ? ? 6A 00 68 ? ? ? ? 68 ? ? ? ? 6A 00 50 E8 ? ? ? ? 8B 0D ? ? ? ? 83 C4 14 8D B0 ? ? ? ? 83 79 30 00 0F 84 ? ? ? ?");
 	CHECKPATT(m_dwGetTracerType);
 
-	m_dwFireBullet = g_Pattern.Find("client.dll", "53 8B DC 83 EC 08 83 E4 F0 83 C4 04 55 8B 6B 04 89 6C 24 04 8B EC 81 EC ? ? ? ? 56 57 8B F9 8B 4B 0C F3 0F 10 41 ? F3 0F 10 49 ? 8B 41 04");
+	m_dwFireBullet = g_Pattern.Find("client.dll", "55 8B EC 81 EC ? ? ? ? 53 56 57 8B F9 8B 5D");
 	CHECKPATT(m_dwFireBullet);
 
 	m_dwBaseInterpolatePart1 = g_Pattern.Find("client.dll", "55 8B EC 53 8B 5D 18 56 8B F1 C7 03 ? ? ? ? F6 46 7C 01 74 3C");
