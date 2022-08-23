@@ -14,7 +14,7 @@ bool C_TFWeaponBase::CanFireCiriticalShotHelper(const bool bHeadShot)
 		const int nOldFov = pOwner->m_iFOV();
 
 		pOwner->m_iFOV() = 70;
-		bRet = VFunc_Get<bool(__thiscall*)(void*, bool, C_BaseEntity*)>(this, 423u)(this, bHeadShot, nullptr);
+		bRet = VFunc_Get<bool(__thiscall*)(void*, bool, C_BaseEntity*)>(this, 424u)(this, bHeadShot, nullptr);
 		pOwner->m_iFOV() = nOldFov;
 	}
 
