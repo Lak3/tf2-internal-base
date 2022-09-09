@@ -137,7 +137,7 @@ bool CInterfaces::Initialize()
 	I::VGuiSystem = reinterpret_cast<vgui::ISystem*>(CreateInterface("vgui2.dll", VGUI_SYSTEM_INTERFACE_VERSION));
 	XASSERTFALSE(I::VGuiSystem == nullptr);
 
-	I::VGuiSurface = reinterpret_cast<vgui::ISurface*>(CreateInterface("vgui2.dll", VGUI_SURFACE_INTERFACE_VERSION));
+	I::VGuiSurface = reinterpret_cast<vgui::ISurface*>(CreateInterface("vguimatsurface.dll", VGUI_SURFACE_INTERFACE_VERSION));
 	XASSERTFALSE(I::VGuiSurface == nullptr);
 
 	I::VGuiScheme = reinterpret_cast<vgui::IScheme*>(CreateInterface("vgui2.dll", VGUI_SCHEME_INTERFACE_VERSION));
