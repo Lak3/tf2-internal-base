@@ -11,7 +11,7 @@ namespace Hooks
 		namespace Paint
 		{
 			using FN = void(__fastcall*)(void*, void*, int);
-			constexpr uint32 Index = 13u;
+			constexpr uint32 Index = 14u;
 
 			void __fastcall Detour(void* ecx, void* edx, int mode);
 		}
