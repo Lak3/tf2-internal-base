@@ -50,7 +50,7 @@ public:
 	virtual bool			IsGameUIVisible() = 0;
 };
 
-#define VENGINE_VGUI_VERSION	"VEngineVGui001"
+#define VENGINE_VGUI_VERSION	"VEngineVGui002"
 
 namespace I { inline IEngineVGui* EngineVGui = nullptr; }
 
