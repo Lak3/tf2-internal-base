@@ -19,10 +19,10 @@ bool COffsets::Initialize()
 	m_dwSaveData = g_Pattern.Find("client.dll", "55 8B EC 83 EC 7C 53 57 8B 7D 0C 8B D9 83 FF FF 75 0B");
 	CHECKPATT(m_dwSaveData);
 
-	m_dwOnAddEntity = g_Pattern.Find("client.dll", "55 8B EC 51 8B 45 0C 53 25 ? ? ? ? 56 8B F1 57 8B 7D 08 8D 1C C5 ? ? ? ? 03 DE 89 5D FC 3D ? ? ? ? 73 1D");
+	m_dwOnAddEntity = g_Pattern.Find("client.dll", "55 8B EC 51 8B 45 0C 53 56 8B F1 57");
 	CHECKPATT(m_dwOnAddEntity);
 
-	m_dwOnRemoveEntity = g_Pattern.Find("client.dll", "55 8B EC 51 8B 45 0C 25 ? ? ? ? 53 8B D9 56 8D 0C C5 ? ? ? ? 03 CB 89 4D FC 57 3D ? ? ? ? 73 1B");
+	m_dwOnRemoveEntity = g_Pattern.Find("client.dll", "55 8B EC 51 8B 45 0C 53 8B D9");
 	CHECKPATT(m_dwOnRemoveEntity);
 
 	m_dwCheckForSequenceChange = g_Pattern.Find("client.dll", "55 8B EC 53 8B 5D 08 57 8B F9 85 DB 0F 84 ? ? ? ? 83 7F 0C 00 75 05 E8 ? ? ? ? 6B 4F 0C 2C 0F 57 C0 56 8B 37 83 C6 D4 03 F1 F3 0F 10 4E ? 0F 2E C8 9F F6 C4 44 7B 62 8B 45 0C 39 06 75 06 80 7D 10 00 74 55 50 8B CB E8 ? ? ? ? 89 45 10 F6 40 0C 02 75 2B 80 7D 14 00 74 25 FF 36 8B CB E8 ? ? ? ? F3 0F 10 40 ? 8B 45 10 F3 0F 10 48 ? 0F 2F C8 77 03 0F 28 C1 F3 0F 11 46 ? EB 07 C7 47 ? ? ? ? ? 8B CF E8 ? ? ? ? 6B 4F 0C 2C 8B 37 83 C6 D4 03 F1 C7 06 ? ? ? ? C7 46 ? ? ? ? ? C7 46 ? ? ? ? ?");
@@ -34,7 +34,7 @@ bool COffsets::Initialize()
 	m_dwFireBullet = g_Pattern.Find("client.dll", "55 8B EC 81 EC ? ? ? ? 53 56 57 8B F9 8B 5D");
 	CHECKPATT(m_dwFireBullet);
 
-	m_dwBaseInterpolatePart1 = g_Pattern.Find("client.dll", "55 8B EC 53 8B 5D 18 56 8B F1 C7 03 ? ? ? ? F6 46 7C 01 74 3C");
+	m_dwBaseInterpolatePart1 = g_Pattern.Find("client.dll", "55 8B EC 53 8B 5D 18 56 8B F1");
 	CHECKPATT(m_dwBaseInterpolatePart1);
 
 	m_dwCalcPlayerView = g_Pattern.Find("client.dll", "55 8B EC 83 EC 18 53 56 8B F1 8B 0D ? ? ? ? 57 8B 01 8B 40 38 FF D0 84 C0 75 0B");
