@@ -28,7 +28,7 @@ namespace Vars
 	namespace Visual
 	{
 		inline bool RemoveVisualRecoil = true;
-		inline bool Tracers = true;
+		inline bool Tracers = false;
 	}
 
 	namespace Misc

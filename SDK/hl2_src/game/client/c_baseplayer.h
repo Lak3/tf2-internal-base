@@ -169,7 +169,7 @@ public:
 	M_NETVAR(m_flConstraintWidth, float, "CBasePlayer", "m_flConstraintWidth");
 	M_NETVAR(m_flConstraintSpeedFactor, float, "CBasePlayer", "m_flConstraintSpeedFactor");
 	M_NETVAR(m_flDeathTime, float, "CBasePlayer", "m_flDeathTime");
-	M_NETVAR(m_nWaterLevel, int, "CBasePlayer", "m_nWaterLevel");
+	M_NETVAR(m_nWaterLevel, BYTE, "CBasePlayer", "m_nWaterLevel");
 	M_NETVAR(m_flLaggedMovementValue, float, "CBasePlayer", "m_flLaggedMovementValue");
 	M_NETVAR(m_AttributeList, void*, "CBasePlayer", "m_AttributeList");
 	M_NETVAR(m_iAttributeDefinitionIndex, int, "CBasePlayer", "m_iAttributeDefinitionIndex");
