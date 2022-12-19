@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -179,6 +179,7 @@
     <ClCompile Include="Hooks\TFPlayer\TFPlayer.cpp" />
     <ClCompile Include="Hooks\TFWeaponBase\TFWeaponBase.cpp" />
     <ClCompile Include="Hooks\VGuiPanel\VGuiPanel.cpp" />
+    <ClCompile Include="Hooks\VGuiSurface\VGuiSurface.cpp" />
     <ClCompile Include="Hooks\ViewRender\ViewRender.cpp" />
     <ClCompile Include="Hooks\WndProc\WndProc.cpp" />
     <ClCompile Include="SDK\ConVars\ConVars.cpp" />
@@ -307,6 +308,7 @@
     <ClInclude Include="Hooks\TFPlayer\TFPlayer.h" />
     <ClInclude Include="Hooks\TFWeaponBase\TFWeaponBase.h" />
     <ClInclude Include="Hooks\VGuiPanel\VGuiPanel.h" />
+    <ClInclude Include="Hooks\VGuiSurface\VGuiSurface.h" />
     <ClInclude Include="Hooks\ViewRender\ViewRender.h" />
     <ClInclude Include="Hooks\WndProc\WndProc.h" />
     <ClInclude Include="SDK\ConVars\ConVars.h" />

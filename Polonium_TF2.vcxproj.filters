@@ -128,6 +128,7 @@
     <ClCompile Include="Hooks\TFPlayer\TFPlayer.cpp" />
     <ClCompile Include="Hooks\BaseEntity\BaseEntity.cpp" />
     <ClCompile Include="Hooks\BasePlayer\BasePlayer.cpp" />
+    <ClCompile Include="Hooks\VGuiSurface\VGuiSurface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entry\Entry.h" />
@@ -516,6 +517,7 @@
     <ClInclude Include="Hooks\TFPlayer\TFPlayer.h" />
     <ClInclude Include="Hooks\BaseEntity\BaseEntity.h" />
     <ClInclude Include="Hooks\BasePlayer\BasePlayer.h" />
+    <ClInclude Include="Hooks\VGuiSurface\VGuiSurface.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="SDK\hl2_src\game\server\base.txt" />

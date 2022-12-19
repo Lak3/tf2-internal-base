@@ -9,6 +9,7 @@
 #include "ClientPrediction/ClientPrediction.h"
 #include "EngineClient/EngineClient.h"
 #include "EngineVGui/EngineVGui.h"
+#include "VGuiSurface/VGuiSurface.h"
 #include "Input/HInput.h"
 #include "ModelRender/ModelRender.h"
 #include "NetChannel/NetChannel.h"
