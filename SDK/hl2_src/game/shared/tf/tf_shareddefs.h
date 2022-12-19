@@ -2988,7 +2988,7 @@ enum class ETFClientClass
 	CTFTeam = 317,
 	CTFTauntProp = 316,
 	CTFPlayerResource = 248,
-	CTFPlayer = 246,
+	CTFPlayer = 247,
 	CTFRagdoll = 282,
 	CTEPlayerAnimEvent = 164,
 	CTFPasstimeLogic = 239,
