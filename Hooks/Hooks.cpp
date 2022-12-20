@@ -14,6 +14,7 @@ bool Hooks::Initialize()
 	ClientPrediction::Initialize();
 	EngineClient::Initialize();
 	EngineVGui::Initialize();
+	VGuiSurface::Initialize();
 	Input::Initialize();
 	ModelRender::Initialize();
 	NetChannel::Initialize();
