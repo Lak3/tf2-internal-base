@@ -212,6 +212,7 @@ public:
 	virtual char const*			GetPrintName(void) const = 0;
 	virtual char const*			GetShootSound(int iIndex) const = 0;
 	virtual int					GetRumbleEffect() const = 0;
+	virtual bool				UsesCenterFireProjectile(void) const = 0;
 	virtual bool				UsesClipsForAmmo1(void) const = 0;
 	virtual bool				UsesClipsForAmmo2(void) const = 0;
 	virtual const unsigned char* GetEncryptionKey(void) = 0;
