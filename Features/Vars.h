@@ -35,5 +35,6 @@ namespace Vars
 	{
 		inline bool Bunnyhop = true;
 		inline bool BypassPure = true;
+		inline bool DisableInterpolation = false;
 	}
 }

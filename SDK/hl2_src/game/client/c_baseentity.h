@@ -120,6 +120,13 @@ struct PredictionContext
 };
 #endif
 
+// Two part guts of Interpolate(). Shared with C_BaseAnimating.
+enum
+{
+	INTERPOLATE_STOP = 0,
+	INTERPOLATE_CONTINUE
+};
+
 //-----------------------------------------------------------------------------
 // Purpose: think contexts
 //-----------------------------------------------------------------------------
