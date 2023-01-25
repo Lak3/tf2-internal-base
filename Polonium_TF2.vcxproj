@@ -183,6 +183,7 @@
     <ClCompile Include="Hooks\ViewRender\ViewRender.cpp" />
     <ClCompile Include="Hooks\WndProc\WndProc.cpp" />
     <ClCompile Include="SDK\ConVars\ConVars.cpp" />
+    <ClCompile Include="SDK\EntityCache\EntityCache.cpp" />
     <ClCompile Include="SDK\hl2_src\common\netmessages.cpp" />
     <ClCompile Include="SDK\hl2_src\game\client\cdll_util.cpp" />
     <ClCompile Include="SDK\hl2_src\game\client\glow_outline_effect.cpp" />
@@ -312,6 +313,7 @@
     <ClInclude Include="Hooks\ViewRender\ViewRender.h" />
     <ClInclude Include="Hooks\WndProc\WndProc.h" />
     <ClInclude Include="SDK\ConVars\ConVars.h" />
+    <ClInclude Include="SDK\EntityCache\EntityCache.h" />
     <ClInclude Include="SDK\Globals\Globals.h" />
     <ClInclude Include="SDK\hl2_src\common\netmessages.h" />
     <ClInclude Include="SDK\hl2_src\common\protocol.h" />
