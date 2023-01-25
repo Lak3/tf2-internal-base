@@ -57,7 +57,6 @@ void BaseClient::Initialize()
 	XASSERT(Table.Hook(&LevelInitPreEntity::Detour, LevelInitPreEntity::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&LevelInitPostEntity::Detour, LevelInitPostEntity::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&LevelShutdown::Detour, LevelShutdown::Index) == FAILED_TO_HOOK);
-	XASSERT(Table.Hook(&CreateMove::Detour, CreateMove::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&FrameStageNotify::Detour, FrameStageNotify::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&DispatchUserMessage::Detour, DispatchUserMessage::Index) == FAILED_TO_HOOK);
 }
