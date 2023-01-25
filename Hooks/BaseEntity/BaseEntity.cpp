@@ -6,7 +6,7 @@ using namespace Hooks;
 
 int __fastcall BaseEntity::BaseInterpolatePart1::Detour(C_BaseEntity* pThis, void* edx, float& currentTime, Vector& oldOrigin, QAngle& oldAngles, Vector& oldVel, int& bNoMoreChanges)
 {
-	if (Vars::Misc::DisableInterpolation)
+	if (Vars::Misc::DisableInterpolation && (pThis->entindex() != g_Globals.m_nLocalIndex))
 	{
 		bNoMoreChanges = true;
 		return INTERPOLATE_STOP;
