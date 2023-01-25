@@ -29,11 +29,6 @@ void __fastcall BaseClient::LevelShutdown::Detour(void* ecx, void* edx)
 	Table.Original<FN>(Index)(ecx, edx);
 }
 
-void __fastcall BaseClient::CreateMove::Detour(void* ecx, void* edx, int sequence_number, float input_sample_frametime, bool active)
-{
-	Table.Original<FN>(Index)(ecx, edx, sequence_number, input_sample_frametime, active);
-}
-
 void __fastcall BaseClient::FrameStageNotify::Detour(void* ecx, void* edx, ClientFrameStage_t curStage)
 {
 	Table.Original<FN>(Index)(ecx, edx, curStage);
