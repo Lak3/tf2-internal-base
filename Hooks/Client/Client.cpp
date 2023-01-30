@@ -42,7 +42,6 @@ void __fastcall BaseClient::FrameStageNotify::Detour(void* ecx, void* edx, Clien
 	}
 
 	case ClientFrameStage_t::FRAME_NET_UPDATE_END: {
-		g_EntityCache.Fill();
 		g_Globals.m_bIsInGame = I::EngineClient->IsInGame();
 		g_Globals.m_bIsGameUIVisible = I::EngineVGui->IsGameUIVisible();
 
@@ -50,6 +49,7 @@ void __fastcall BaseClient::FrameStageNotify::Detour(void* ecx, void* edx, Clien
 		{
 			g_Globals.m_nMaxClients = I::EngineClient->GetMaxClients();
 			g_Globals.m_nMaxEntities = I::ClientEntityList->GetMaxEntities();
+            g_EntityCache.Fill();
 		}
 		break;
 	}

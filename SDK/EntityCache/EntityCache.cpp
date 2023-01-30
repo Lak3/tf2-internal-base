@@ -13,7 +13,7 @@ void CEntityCache::Fill()
 
 		m_pWeapon = m_pLocal->GetActiveTFWeapon();
 
-		for (int n = 1; n < I::ClientEntityList->GetHighestEntityIndex(); n++)
+		for (int n = 1; n < g_Globals.m_nMaxEntities; n++)
 		{
 			IClientEntity* pEntity = UTIL_EntityByIndex(n);
 
