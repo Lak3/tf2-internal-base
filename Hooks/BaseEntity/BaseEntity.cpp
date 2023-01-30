@@ -6,7 +6,15 @@ using namespace Hooks;
 
 int __fastcall BaseEntity::BaseInterpolatePart1::Detour(C_BaseEntity* pThis, void* edx, float& currentTime, Vector& oldOrigin, QAngle& oldAngles, Vector& oldVel, int& bNoMoreChanges)
 {
-	return Func.Original<FN>()(pThis, edx, currentTime, oldOrigin, oldAngles, oldVel, bNoMoreChanges);
+	if (Vars::Misc::DisableInterpolation && (pThis->entindex() != g_Globals.m_nLocalIndex))
+	{
+		bNoMoreChanges = true;
+		return INTERPOLATE_STOP;
+	}
+	else
+	{
+		return Func.Original<FN>()(pThis, edx, currentTime, oldOrigin, oldAngles, oldVel, bNoMoreChanges);
+	}
 }
 
 void BaseEntity::Initialize()

@@ -179,9 +179,11 @@
     <ClCompile Include="Hooks\TFPlayer\TFPlayer.cpp" />
     <ClCompile Include="Hooks\TFWeaponBase\TFWeaponBase.cpp" />
     <ClCompile Include="Hooks\VGuiPanel\VGuiPanel.cpp" />
+    <ClCompile Include="Hooks\VGuiSurface\VGuiSurface.cpp" />
     <ClCompile Include="Hooks\ViewRender\ViewRender.cpp" />
     <ClCompile Include="Hooks\WndProc\WndProc.cpp" />
     <ClCompile Include="SDK\ConVars\ConVars.cpp" />
+    <ClCompile Include="SDK\EntityCache\EntityCache.cpp" />
     <ClCompile Include="SDK\hl2_src\common\netmessages.cpp" />
     <ClCompile Include="SDK\hl2_src\game\client\cdll_util.cpp" />
     <ClCompile Include="SDK\hl2_src\game\client\glow_outline_effect.cpp" />
@@ -307,9 +309,11 @@
     <ClInclude Include="Hooks\TFPlayer\TFPlayer.h" />
     <ClInclude Include="Hooks\TFWeaponBase\TFWeaponBase.h" />
     <ClInclude Include="Hooks\VGuiPanel\VGuiPanel.h" />
+    <ClInclude Include="Hooks\VGuiSurface\VGuiSurface.h" />
     <ClInclude Include="Hooks\ViewRender\ViewRender.h" />
     <ClInclude Include="Hooks\WndProc\WndProc.h" />
     <ClInclude Include="SDK\ConVars\ConVars.h" />
+    <ClInclude Include="SDK\EntityCache\EntityCache.h" />
     <ClInclude Include="SDK\Globals\Globals.h" />
     <ClInclude Include="SDK\hl2_src\common\netmessages.h" />
     <ClInclude Include="SDK\hl2_src\common\protocol.h" />

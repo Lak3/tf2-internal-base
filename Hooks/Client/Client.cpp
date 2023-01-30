@@ -19,6 +19,7 @@ void __fastcall BaseClient::LevelInitPostEntity::Detour(void* ecx, void* edx)
 
 void __fastcall BaseClient::LevelShutdown::Detour(void* ecx, void* edx)
 {
+	g_EntityCache.Clear();
 	g_Globals.m_bIsInGame = false;
 	g_Globals.m_bIsGameUIVisible = true;
 
@@ -29,17 +30,18 @@ void __fastcall BaseClient::LevelShutdown::Detour(void* ecx, void* edx)
 	Table.Original<FN>(Index)(ecx, edx);
 }
 
-void __fastcall BaseClient::CreateMove::Detour(void* ecx, void* edx, int sequence_number, float input_sample_frametime, bool active)
-{
-	Table.Original<FN>(Index)(ecx, edx, sequence_number, input_sample_frametime, active);
-}
-
 void __fastcall BaseClient::FrameStageNotify::Detour(void* ecx, void* edx, ClientFrameStage_t curStage)
 {
 	Table.Original<FN>(Index)(ecx, edx, curStage);
 
-	if (curStage == ClientFrameStage_t::FRAME_NET_UPDATE_END)
+	switch (curStage)
 	{
+	case ClientFrameStage_t::FRAME_NET_UPDATE_START: {
+		g_EntityCache.Clear();
+		break;
+	}
+
+	case ClientFrameStage_t::FRAME_NET_UPDATE_END: {
 		g_Globals.m_bIsInGame = I::EngineClient->IsInGame();
 		g_Globals.m_bIsGameUIVisible = I::EngineVGui->IsGameUIVisible();
 
@@ -47,7 +49,10 @@ void __fastcall BaseClient::FrameStageNotify::Detour(void* ecx, void* edx, Clien
 		{
 			g_Globals.m_nMaxClients = I::EngineClient->GetMaxClients();
 			g_Globals.m_nMaxEntities = I::ClientEntityList->GetMaxEntities();
+            g_EntityCache.Fill();
 		}
+		break;
+	}
 	}
 }
 
@@ -62,7 +67,6 @@ void BaseClient::Initialize()
 	XASSERT(Table.Hook(&LevelInitPreEntity::Detour, LevelInitPreEntity::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&LevelInitPostEntity::Detour, LevelInitPostEntity::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&LevelShutdown::Detour, LevelShutdown::Index) == FAILED_TO_HOOK);
-	XASSERT(Table.Hook(&CreateMove::Detour, CreateMove::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&FrameStageNotify::Detour, FrameStageNotify::Index) == FAILED_TO_HOOK);
 	XASSERT(Table.Hook(&DispatchUserMessage::Detour, DispatchUserMessage::Index) == FAILED_TO_HOOK);
 }

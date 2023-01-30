@@ -1,5 +1,7 @@
 
-.vs/Polonium_TF2/v16/.suo
+[Dd]ebug
+[Rr]elease
+.vs
 *.db
 *.ipch
 *.db-wal

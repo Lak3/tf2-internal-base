@@ -217,6 +217,7 @@ public:
 	M_NETVAR(m_flInspectAnimEndTime, float, "CTFWeaponBase", "m_flInspectAnimEndTime");
 	M_NETVAR(m_nInspectStage, int, "CTFWeaponBase", "m_nInspectStage");
 	M_NETVAR(m_iConsecutiveShots, int, "CTFWeaponBase", "m_iConsecutiveShots");
+	M_NETVAR(m_bReadyToBackstab, bool, "CTFKnife", "m_bReadyToBackstab");
 
 public:
 	bool CanFireCiriticalShotHelper(const bool bHeadShot = false);
