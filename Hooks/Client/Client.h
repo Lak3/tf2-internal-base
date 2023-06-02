@@ -38,14 +38,6 @@ namespace Hooks
 			void __fastcall Detour(void* ecx, void* edx);
 		}
 
-		namespace CreateMove
-		{
-			using FN = void(__fastcall*)(void*, void*, int, float, bool);
-			constexpr uint32 Index = 21u;
-
-			void __fastcall Detour(void* ecx, void* edx, int sequence_number, float input_sample_frametime, bool active);
-		}
-
 		namespace FrameStageNotify
 		{
 			using FN = void(__fastcall*)(void*, void*, ClientFrameStage_t);
